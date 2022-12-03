@@ -7,8 +7,10 @@
 
 package com.crio.qeats;
 
-import com.crio.qeats.globals.GlobalConstants;
+//import com.crio.qeats.globals.GlobalConstants;
 import lombok.extern.log4j.Log4j2;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,6 +20,8 @@ import org.springframework.context.annotation.Scope;
 @SpringBootApplication
 @Log4j2
 public class QEatsApplication {
+
+  private static final Logger log = LogManager.getLogger(QEatsApplication.class);
 
   public static void main(String[] args) {
     SpringApplication.run(QEatsApplication.class, args);
