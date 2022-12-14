@@ -9,15 +9,15 @@ package com.crio.qeats.dto;
 
 //import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-/*import java.util.ArrayList;
+import java.util.ArrayList;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.util.ArrayList;
 import java.util.List;
 import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;*/
+import lombok.NoArgsConstructor;
 
-// TODO: CRIO_TASK_MODULE_SERIALIZATION
-//  Implement Restaurant class.
 // Complete the class such that it produces the following JSON during serialization.
 // {
 //  "restaurantId": "10",
@@ -34,27 +34,39 @@ import lombok.NoArgsConstructor;*/
 //  ]
 // }
 
-//@Data
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Restaurant {
-    @JsonProperty("restaurantId")
-    String restaurant_Id;
-    @JsonProperty("name")
-    String name;
-    @JsonProperty("city")
-    String city;
-    @JsonProperty("imageUrl")
-    String image_Url;
-    @JsonProperty("latitude")
-    float latitude;
-    @JsonProperty("longitude")
-    float longitude;
-    @JsonProperty("opensAt")
-    String opens_At;
-    @JsonProperty("closesAt")
-    String closes_At;
-    @JsonProperty("attributes")
-    String[] attributes;
 
+   @NotNull @JsonIgnore
+  private String id;
 
+  @NotNull 
+  private String restaurantId;
+
+  @NotNull
+  private String name;
+
+  @NotNull
+  private String city;
+
+  @NotNull
+  private String imageUrl;
+
+  @NotNull
+  private Double latitude;
+
+  @NotNull
+  private Double longitude;
+
+  @NotNull
+  private String opensAt;
+
+  @NotNull
+  private String closesAt;
+
+  @NotNull
+  private List<String> attributes = new ArrayList<>();
+  
 }
-
