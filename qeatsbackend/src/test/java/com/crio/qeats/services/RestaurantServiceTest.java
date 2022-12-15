@@ -60,6 +60,7 @@ class RestaurantServiceTest {
   @BeforeEach
   void setup() {
     MockitoAnnotations.initMocks(this);
+
     objectMapper = new ObjectMapper();
   }
 
@@ -103,11 +104,10 @@ class RestaurantServiceTest {
 
 
      assertFalse(false);
+
+
   }
 
-
-
-  
   private List<Restaurant> loadRestaurantsDuringNormalHours() throws IOException {
     String fixture =
         FixtureHelpers.fixture(FIXTURES + "/normal_hours_list_of_restaurants.json");
