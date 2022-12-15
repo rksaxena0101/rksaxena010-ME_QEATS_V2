@@ -11,11 +11,6 @@ import java.util.List;
 import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-import org.apache.logging.log4j.core.layout.SyslogLayout;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 // TODO: CRIO_TASK_MODULE_RESTAURANTSAPI
 //  Implement GetRestaurantsResponse.
