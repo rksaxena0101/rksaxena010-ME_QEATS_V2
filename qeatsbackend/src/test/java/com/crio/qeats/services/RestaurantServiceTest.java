@@ -107,7 +107,7 @@ class RestaurantServiceTest {
 
 
   }
-
+  
   private List<Restaurant> loadRestaurantsDuringNormalHours() throws IOException {
     String fixture =
         FixtureHelpers.fixture(FIXTURES + "/normal_hours_list_of_restaurants.json");
