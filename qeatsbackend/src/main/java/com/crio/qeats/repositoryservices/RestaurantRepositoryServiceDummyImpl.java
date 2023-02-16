@@ -44,6 +44,7 @@ public class RestaurantRepositoryServiceDummyImpl implements RestaurantRepositor
       restaurant.setLatitude(latitude + ThreadLocalRandom.current().nextDouble(0.000001, 0.2));
       restaurant.setLongitude(longitude + ThreadLocalRandom.current().nextDouble(0.000001, 0.2));
     }
+    System.out.println("restaurantRepositoryServiceImp :- "+restaurantList);
     return restaurantList;
   }
 

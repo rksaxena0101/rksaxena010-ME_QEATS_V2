@@ -65,6 +65,13 @@ public class RestaurantRepositoryServiceImpl implements RestaurantRepositoryServ
   // 1. Check if a restaurant is nearby and open. If so, it is a candidate to be returned.
   // NOTE: How far exactly is "nearby"?
 
+
+
+
+
+
+
+
   /**
    * Utility method to check if a restaurant is within the serving radius at a given time.
    * @return boolean True if restaurant falls within serving radius and is open, false otherwise

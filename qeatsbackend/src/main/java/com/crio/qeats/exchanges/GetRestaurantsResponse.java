@@ -10,7 +10,7 @@ import com.crio.qeats.dto.Restaurant;
 import java.util.List;
 import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+//import lombok.Data;
 
 // TODO: CRIO_TASK_MODULE_RESTAURANTSAPI
 //  Implement GetRestaurantsResponse.
@@ -46,12 +46,18 @@ import lombok.Data;
 //      ]
 //    }
 //  ]
-@Data
+//@Data
 @AllArgsConstructor
 public class GetRestaurantsResponse extends Restaurant {
     @NotNull
     List<Restaurant> Restaurants;
 
+    public GetRestaurantsResponse() {
+
+    }
+    // public GetRestaurantsResponse(List<Restaurant> Restaurants) {
+    //     this.Restaurants = Restaurants;
+    // }
     public void printRestauratList() {
         System.out.println("GetRestaurantRes:- "+Restaurants.toString());
     }
