@@ -26,15 +26,15 @@ public class GetRestaurantsRequest extends Restaurant{
     @NotNull
     @Max(90)
     @Min(90)
-    private double rLatitude;
+    private double latitude;
     @NotNull
     @Max(180)
     @Min(-90)
-    private double rLongitude;
+    private double longitude;
 
     public GetRestaurantsRequest(double latitude, double longitude) {
-        this.rLatitude = latitude;
-        this.rLongitude = longitude;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
 }

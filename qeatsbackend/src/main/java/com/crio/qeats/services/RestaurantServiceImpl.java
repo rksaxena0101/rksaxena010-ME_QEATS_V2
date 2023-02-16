@@ -43,7 +43,7 @@ public class RestaurantServiceImpl implements RestaurantService {
       Double servingRadiusInKms = 0.0;
 
       servingRadiusInKms = isPeakHours(currentTime) ? peakHoursServingRadiusInKms : normalHoursServingRadiusInKms;
-      List<Restaurant> restaurants = restaurantRepositoryService.findAllRestaurantsCloseBy(getRestaurantsRequest.getRLatitude(), getRestaurantsRequest.getRLongitude(), currentTime, servingRadiusInKms);
+      List<Restaurant> restaurants = restaurantRepositoryService.findAllRestaurantsCloseBy(getRestaurantsRequest.getLatitude(), getRestaurantsRequest.getLongitude(), currentTime, servingRadiusInKms);
       System.out.println("restaurantServiceImp :- "+restaurants);
      return new GetRestaurantsResponse(restaurants);
   }
